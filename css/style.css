@@ -15,7 +15,7 @@
 span.number, span.suit {
     text-align: center;
     width: 100%;
-    display: block;
+    display: none;
     padding-top: 8px;
 }
 
