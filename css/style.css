@@ -1,0 +1,21 @@
+.card {
+    height: 60px;
+    width: 40px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #454545;
+    float: left;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Lato;
+}
+
+span.number, span.suit {
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding-top: 8px;
+}
+
