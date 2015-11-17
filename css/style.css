@@ -22,3 +22,15 @@ span.number, span.suit {
 .show {
     display: block !important;
 }
+
+.score {
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+#player1, #player2 {
+    display: block;
+    padding: 14px;
+}
+
