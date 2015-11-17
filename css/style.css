@@ -23,13 +23,13 @@ span.number, span.suit {
     display: block !important;
 }
 
-.score {
+.scores, #messages {
     display: block;
     float: left;
     width: 100%;
 }
 
-#player1, #player2 {
+.player {
     display: block;
     padding: 14px;
 }
