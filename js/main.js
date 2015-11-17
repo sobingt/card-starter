@@ -32,7 +32,7 @@ var shuffle = function(deck){
   return deck;
 };
 
-
+cardCounter =0;
 //Creating a deck object
 var myDeck = new deck();
 
@@ -45,9 +45,26 @@ window.onload = function(){
     div = document.createElement('div');
     div.className = 'card';
     div.addEventListener('click', function(event){
-      this.querySelector(".number").style.display = "block";
-      this.querySelector(".suit").style.display = "block";
+      if(cardCounter==2)
+      {
+        var flippedCards = document.getElementsByClassName("show");
+        console.log(flippedCards.length);
+        for(var i =flippedCards.length-1; i>-1;i--){
+          console.log(flippedCards[i]);
+          console.log(i);
+          flippedCards[i].classList.remove("show");
+        }
+        cardCounter =1;
+      }
+      else
+        cardCounter++;
+      this.querySelector(".number").classList.add("show");
+      this.querySelector(".suit").classList.add("show");
+      
+      
+        
     });
+    
     var ascii_char;
     if(myDeck[i].suit =='Diamonds'){
       ascii_char = '&diams;';

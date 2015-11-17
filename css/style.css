@@ -19,3 +19,6 @@ span.number, span.suit {
     padding-top: 8px;
 }
 
+.show {
+    display: block !important;
+}
