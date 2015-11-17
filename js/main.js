@@ -30,8 +30,8 @@ var player = function(name){
   this.score = 0;
 }
 var players =[];
-players[0]= new player("prath");
-players[1] = new player("Surya");
+players[0]= new player(prompt("Enter your player1 name?"));
+players[1] = new player(prompt("Enter your player2 name?"));
 
 var shuffle = function(deck){
   for(var j, x, i = deck.length; i; j = parseInt(Math.random() * i), x = deck[--i], deck[i] = deck[j], deck[j] = x);
@@ -46,7 +46,7 @@ var myDeck = new deck();
 
 window.onload = function(){
 
-  //shuffle(myDeck);
+  shuffle(myDeck);
   //Loop for all 52 cards in the deck
   for(var i = 0; i< myDeck.length; i++)
   {
@@ -72,7 +72,7 @@ window.onload = function(){
         else
         {
           playerCounter = 1-playerCounter;
-          document.getElementById("messages").innerHTML =players[playerCounter].name+"is your turn "+playerCounter;
+          document.getElementById("messages").innerHTML =players[playerCounter].name+", this is your turn "+playerCounter;
           
         }
           
@@ -108,7 +108,7 @@ window.onload = function(){
   
   messageDiv = document.createElement('div');
   messageDiv.setAttribute('id','messages');
-  messageDiv.innerHTML= players[0].name +' is your tune';
+  messageDiv.innerHTML= players[0].name +', this is your tune';
   document.body.appendChild(messageDiv);
   
 };
